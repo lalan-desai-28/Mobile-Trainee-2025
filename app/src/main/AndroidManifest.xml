@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".drawable.DrawableActivity"
+            android:exported="false" />
+        <activity
             android:name=".layout.design.DesignActivity"
             android:exported="false" />
         <activity
