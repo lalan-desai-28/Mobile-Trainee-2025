@@ -27,8 +27,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:backgroundTint="@null"
-            android:src="@drawable/circular_ring" />
+            android:src="@drawable/circular_ring"
+            app:backgroundTint="@null" />
 
     </androidx.cardview.widget.CardView>
 
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/task_drawable_selector_edittext_border"
         android:drawableStart="@drawable/baseline_account_circle_24"
         android:drawablePadding="10dp"
         android:hint="Name"
@@ -46,12 +46,36 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/edit_text_border"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/task_drawable_selector_edittext_border"
         android:drawableEnd="@drawable/baseline_add_call_24"
         android:drawablePadding="10dp"
         android:hint="Number"
         android:padding="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:padding="7dp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/task_drawable_selector_checkbox"
+            android:button="@null" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:text="I agree to the terms and conditions." />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="@drawable/button_background"
+            android:background="@drawable/task_drawable_selector_button"
             android:text="SignUp"
             android:textColor="@color/white"
             app:backgroundTint="@null" />
@@ -76,7 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:background="@drawable/button_background_two"
+            android:background="@drawable/task_drawable_selector_button_two"
             android:text="Login"
             app:backgroundTint="@null" />
 
