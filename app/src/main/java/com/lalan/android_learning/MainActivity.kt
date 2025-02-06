@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 import com.lalan.android_learning.activity.ActivityLearning
+import com.lalan.android_learning.dimensions.DimensionsLearning
 import com.lalan.android_learning.drawable.DrawableActivity
 import com.lalan.android_learning.layout.LayoutLearning
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var activity_button: Button
     private lateinit var layout_button: Button
     private lateinit var drawable_button: Button
+    private lateinit var dimension_button : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         activity_button = findViewById(R.id.activity_button)
         layout_button = findViewById(R.id.layout_button)
         drawable_button = findViewById(R.id.drawable_button)
+        dimension_button = findViewById(R.id.dimension_button)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -39,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        dimension_button.setOnClickListener{
+            val intent = Intent(this, DimensionsLearning::class.java)
+            startActivity(intent)
+        }
 
     }
 

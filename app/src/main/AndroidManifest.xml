@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".dimensions.responsive_blog.ResponsiveBlogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dimensions.DimensionsLearning"
+            android:exported="false" />
+        <activity
             android:name=".drawable.DrawableActivity"
             android:exported="false" />
         <activity

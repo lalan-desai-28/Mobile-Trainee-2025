@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_landscape"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    tools:context=".dimensions.responsive_blog.ResponsiveBlogActivity">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_landscape"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/blog_person" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView4_landscape"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/author_name"
+                android:textSize="@dimen/heading"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6_landscape"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/blog_date"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+            <TextView
+                android:id="@+id/textView7_landscape"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/blog_read_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blog_title"
+                android:textSize="@dimen/heading"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blog_image_one" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_desciption"
+                android:textSize="@dimen/small_text" />
+
+
+            <!--1st-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_first_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_first_desc"
+                android:textSize="@dimen/small_text" />
+
+            <!--2nd-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_second_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_second_description"
+                android:textSize="@dimen/small_text" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                android:maxWidth="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blog_image_four" />
+
+
+            <!--3rd-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_third_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_third_description"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                android:maxWidth="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blog_image_three" />
+
+
+            <!--4th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_four_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_four_description"
+                android:textSize="@dimen/small_text" />
+
+
+            <!--5th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_five_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_five_description"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                android:maxWidth="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blog_image_six" />
+
+
+            <!--6th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_six_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_six_description"
+                android:textSize="@dimen/small_text" />
+
+
+            <!--7th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_seven_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_seven_description"
+                android:textSize="@dimen/small_text" />
+
+            <!--8th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_eight_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_eight_description"
+                android:textSize="@dimen/small_text" />
+
+
+            <!--9th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_nine_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_nine_description"
+                android:textSize="@dimen/small_text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10sp"
+                android:maxWidth="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blog_image_five" />
+
+
+            <!--10th-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:justificationMode="inter_word"
+                android:lineHeight="20sp"
+                android:text="@string/blog_ten_title"
+                android:textSize="@dimen/bullet_points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineHeight="20sp"
+                android:text="@string/blog_ten_description"
+                android:textSize="@dimen/small_text" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="25dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/person_one" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_one_person_name"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_one"
+                    android:textSize="@dimen/extra_small_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_one_time"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/person_two" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_two_person_name"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_two"
+                    android:textSize="@dimen/extra_small_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_two_time"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--            3rd comment-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/person_three" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_three_person_name"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_three"
+                    android:textSize="@dimen/extra_small_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_comment_three_time"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="author_name">Snehasish Konger</string>
+    <string name="blog_date">Nov 23, 2022</string>
+    <string name="blog_read_time">3 min read</string>
+    <string name="blog_title">10 productivity tips that I learned from blogging</string>
+    <string name="blog_desciption">Being productive while doing anything is the most important thing. In this story I’m going to share 10 productivity tips with you that I learned and use in blogging.</string>
+    <string name="blog_first_title">1. Find your blogging routine</string>
+    <string name="blog_first_desc">The first step to being productive as a blogger is to find a routine that works for you. Depending on your blog topics and niche, you may need to post daily, weekly, or monthly. You may also need to spend time each day or week on other tasks like promoting your blog, replying to comments, or brainstorming new ideas.</string>
+    <string name="blog_second_title">2. Set goals</string>
+    <string name="blog_second_description">It can be helpful to set both long-term and short-term goals for your blog. This will give you something to strive for and help you stay on track. Long-term goals could be things like getting to a certain number of page views or subscribers, while short-term goals could be things like writing and scheduling a month’s worth of content in advance.</string>
+    <string name="blog_third_title">3. Create a content calendar</string>
+    <string name="blog_third_description">One of the best ways to be productive as a blogger is to create a content calendar. This will help you keep track of your ideas, plan ahead, and make sure you’re posting regularly. There are a few different ways you can create a content calendar. You could use a spreadsheet, an online tool, or even just a physical planner.</string>
+    <string name="blog_four_title">4. Write in batches</string>
+    <string name="blog_four_description">If you find yourself struggling to be productive when writing blog posts, try writing in batches. This means setting aside a specific amount of time to write several posts at once. This can help you get into a flow and make the most of your time.</string>
+    <string name="blog_five_title">5. Repurpose content</string>
+    <string name="blog_five_description">One way to be productive as a blogger is to repurpose your content. This means taking one piece of content and turning it into multiple pieces. For example, you could turn a blog post into a video, podcast episode, or infographic. This is a great way to get more mileage out of your content and save time in the long run.</string>
+    <string name="blog_six_title">6. Automate and delegate</string>
+    <string name="blog_six_description">As your blog grows, you’ll likely find there are more and more tasks to do each week. To stay productive, you may need to start automating or delegating some of these tasks. Automation can mean using tools to help with things like social media or email marketing. Delegation means hiring someone to help with things like design, writing, or editing.</string>
+    <string name="blog_seven_title">7. Edit strategically</string>
+    <string name="blog_seven_description">Editing is an important part of the blogging process, but it can also be time-consuming. To be more productive, try to edit as you go. This means taking a few minutes after each section or paragraph to fix any errors or make any changes. This will help you avoid having to do a full edit at the end, which can save a lot of time.</string>
+    <string name="blog_eight_title">8. Promote your content</string>
+    <string name="blog_eight_description">If you want your blog to be successful, you need to promote your content. This can be done in a variety of ways, including social media, email marketing, and guest blogging. The key is to find the methods that work best for you and your blog.</string>
+    <string name="blog_nine_title">9. Measure your progress</string>
+    <string name="blog_nine_description">It’s important to measure your progress as a blogger so you can see what’s working and what isn’t. This can be done in a number of ways, including Google Analytics, social media analytics, and email analytics. By tracking your progress, you can make changes to improve your productivity.</string>
+    <string name="blog_ten_title">10. Enjoy the process</string>
+    <string name="blog_ten_description">One of the most important productivity tips for bloggers is to enjoy the process. Blogging can be a lot of work, but it should also be something you enjoy. If you’re not enjoying it, take a step back and reevaluate why you’re doing it.</string>
+    <string name="blog_comment_one_person_name">Julien Mauve</string>
+    <string name="blog_comment_one">It was a great read, keep it up!</string>
+    <string name="blog_comment_one_time">3 hours ago</string>
+    <string name="blog_comment_two_person_name">Hazel Lancasters</string>
+    <string name="blog_comment_two">Loved the article! Kudos!!!</string>
+    <string name="blog_comment_two_time">1 week ago</string>
+    <string name="blog_comment_three_person_name">Alex Costa</string>
+    <string name="blog_comment_three">Gotta have to start following this!</string>
+    <string name="blog_comment_three_time">1 week ago</string>
+</resources>
