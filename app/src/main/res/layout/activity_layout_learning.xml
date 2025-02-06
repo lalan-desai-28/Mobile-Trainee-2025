@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_margin="10dp"
+    tools:context=".layout.LayoutLearning">
 
     <Button
-        android:id="@+id/activity_button"
+        android:id="@+id/signup_from_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity" />
+        android:text="SignUp Design (Linearlayout)" />
 
     <Button
-        android:id="@+id/layout_button"
+        android:id="@+id/edit_profile_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Layout" />
+        android:text="Edit Profile Design (Constraintlayout)" />
+
 
     <Button
-        android:id="@+id/drawable_button"
+        android:id="@+id/design_form_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Drawable &amp; Selector" />
+        android:text="Design Form (Framelayout)" />
+
 
 </LinearLayout>

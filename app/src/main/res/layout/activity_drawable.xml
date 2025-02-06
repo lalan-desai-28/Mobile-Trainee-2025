@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".drawable.DrawableActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/roundCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="100sp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circular_ring"
+            android:src="@drawable/shah_rukh_khan" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/circular_ring"
+            app:backgroundTint="@null" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/task_drawable_selector_edittext_border"
+        android:drawableStart="@drawable/baseline_account_circle_24"
+        android:drawablePadding="10dp"
+        android:hint="Name"
+        android:padding="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/task_drawable_selector_edittext_border"
+        android:drawableEnd="@drawable/baseline_add_call_24"
+        android:drawablePadding="10dp"
+        android:hint="Number"
+        android:padding="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:padding="7dp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/task_drawable_selector_checkbox"
+            android:button="@null" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:text="I agree to the terms and conditions." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/task_drawable_selector_button"
+            android:text="SignUp"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/task_drawable_selector_button_two"
+            android:text="Login"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</LinearLayout>
