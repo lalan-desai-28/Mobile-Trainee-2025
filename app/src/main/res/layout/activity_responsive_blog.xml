@@ -23,6 +23,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/blog_person" />
@@ -89,6 +90,7 @@
 
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -152,6 +154,7 @@
 
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="10dp"
@@ -184,6 +187,7 @@
                 android:textSize="@dimen/small_text" />
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="10dp"
@@ -239,6 +243,7 @@
                 android:textSize="@dimen/small_text" />
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="10dp"
@@ -339,6 +344,7 @@
                 android:textSize="@dimen/small_text" />
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="10dp"
@@ -372,6 +378,7 @@
 
 
             <ImageView
+                android:contentDescription="@string/blog_image_content_description"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="20dp"
@@ -396,6 +403,7 @@
 
 
                     <ImageView
+                        android:contentDescription="@string/blog_image_content_description"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/person_one" />
@@ -446,6 +454,7 @@
                     app:cardCornerRadius="25dp">
 
                     <ImageView
+                        android:contentDescription="@string/blog_image_content_description"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/person_two" />
@@ -497,6 +506,7 @@
                     app:cardCornerRadius="25dp">
 
                     <ImageView
+                        android:contentDescription="@string/blog_image_content_description"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/person_three" />
