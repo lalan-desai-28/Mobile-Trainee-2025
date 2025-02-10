@@ -70,7 +70,6 @@ class ViewPagerActivity : AppCompatActivity() {
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
 
-
             val itemCount = viewPager.adapter?.itemCount ?: -1
 
             override fun onPageScrolled(
@@ -78,7 +77,6 @@ class ViewPagerActivity : AppCompatActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                Log.d("TAG", "onPageScrolled: $position")
 
                 if (viewPager.scrollState == ViewPager2.SCROLL_STATE_DRAGGING && viewPager.currentItem == 0 && viewPager.currentItem == position) {
                     viewPager.setCurrentItem(itemCount - 1, true)
@@ -86,7 +84,6 @@ class ViewPagerActivity : AppCompatActivity() {
 
                 if (viewPager.scrollState == ViewPager2.SCROLL_STATE_DRAGGING && viewPager.currentItem == itemCount - 1 && viewPager.currentItem == position) {
                     viewPager.setCurrentItem(0, true)
-
                 }
 
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
@@ -95,5 +92,4 @@ class ViewPagerActivity : AppCompatActivity() {
         })
 
     }
-
 }
