@@ -1,32 +1,33 @@
 package com.lalan.android_learning.viewpager.adapters
 
+import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.lalan.android_learning.viewpager.Wallpaper
-import com.lalan.android_learning.viewpager.WallpaperFragmentLayout
+import com.lalan.android_learning.viewpager.fragments.WallpaperFragmentLayout
 
 class WallpaperFragmentAdapter(
-    fragmentActivity: FragmentActivity,
-    private val wallpaperList: List<Wallpaper>
-) : FragmentStateAdapter(fragmentActivity) {
+    manager: FragmentManager,
+    lifecycle: Lifecycle,
+    wallpapers: List<Wallpaper>
+) : FragmentStateAdapter(manager, lifecycle) {
 
-    private val fragments = mutableListOf<Fragment>()
-
-    val genreSeperatedList = wallpaperList.groupBy { it.type }
-
-    init {
-        genreSeperatedList.forEach { s, wallpapers ->
-            fragments.add(WallpaperFragmentLayout(s, wallpapers))
-        }
-    }
+    private val genreSeparatedList = wallpapers.shuffled().groupBy { it.type }
 
     override fun getItemCount(): Int {
-        return wallpaperList.groupBy { it.type }.count()
+        return genreSeparatedList.size
     }
 
     override fun createFragment(position: Int): Fragment {
-        return fragments[position]
+        val genre = genreSeparatedList.keys.toList()[position]
+        val wallpaperForGenre = genreSeparatedList.getValue(genre)
+        return WallpaperFragmentLayout(wallpaperForGenre)
+    }
+
+    fun getTitle(position: Int): String {
+        return genreSeparatedList.keys.toList()[position]
     }
 
 }
