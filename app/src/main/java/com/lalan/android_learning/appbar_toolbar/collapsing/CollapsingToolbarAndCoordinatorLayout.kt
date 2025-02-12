@@ -1,4 +1,4 @@
-package com.lalan.android_learning.appbar_toolbar
+package com.lalan.android_learning.appbar_toolbar.collapsing
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

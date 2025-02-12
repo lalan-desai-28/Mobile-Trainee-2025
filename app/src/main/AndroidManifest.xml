@@ -13,13 +13,22 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
-            android:name=".appbar_toolbar.CollapsingToolbarAndCoordinatorLayout"
+            android:name=".snackbar_fab.fab.FABExample"
             android:exported="false" />
         <activity
-            android:name=".appbar_toolbar.SimpleToolbar"
+            android:name=".snackbar_fab.snackbar.SnackbarExamples"
             android:exported="false" />
         <activity
-            android:name=".appbar_toolbar.SimpleActionBar"
+            android:name=".snackbar_fab.SnakckbarAndFABLearning"
+            android:exported="false" />
+        <activity
+            android:name=".appbar_toolbar.collapsing.CollapsingToolbarAndCoordinatorLayout"
+            android:exported="false" />
+        <activity
+            android:name=".appbar_toolbar.toolbar.SimpleToolbar"
+            android:exported="false" />
+        <activity
+            android:name=".appbar_toolbar.actionbar.SimpleActionBar"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity

@@ -43,5 +43,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AppBar Toolbar"/>
+
+    <Button
+        android:id="@+id/snackbar_fab_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Snackbar and FAB"/>
     
 </LinearLayout>
