@@ -47,7 +47,7 @@ class ViewPagerActivity : AppCompatActivity() {
             Wallpaper(R.drawable.vehicle_3, "Vehicle"),
             Wallpaper(R.drawable.vehicle_4, "Vehicle"),
 
-            Wallpaper(R.drawable.wildlife_1, "Wildlife"),gi
+            Wallpaper(R.drawable.wildlife_1, "Wildlife"),
             Wallpaper(R.drawable.wildlife_2, "Wildlife"),
             Wallpaper(R.drawable.wildlife_4, "Wildlife"),
             Wallpaper(R.drawable.wildlife_4, "Wildlife")
