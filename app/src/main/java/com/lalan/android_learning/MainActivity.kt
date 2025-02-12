@@ -10,6 +10,7 @@ import com.lalan.android_learning.appbar_toolbar.AppbarToolbarLearning
 import com.lalan.android_learning.dimensions.DimensionsLearning
 import com.lalan.android_learning.drawable.DrawableActivity
 import com.lalan.android_learning.layout.LayoutLearning
+import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var view_pager_button: Button
     private lateinit var dimension_button: Button
     private lateinit var appbar_toolbar_button: Button
+    private lateinit var snackbar_fab_button: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         dimension_button = findViewById(R.id.dimension_button)
         view_pager_button = findViewById(R.id.view_pager_button)
         appbar_toolbar_button = findViewById(R.id.appbar_toolbar_button)
+        snackbar_fab_button = findViewById(R.id.snackbar_fab_button)
 
 
         activity_button.setOnClickListener {
@@ -63,6 +66,11 @@ class MainActivity : AppCompatActivity() {
 
         appbar_toolbar_button.setOnClickListener {
             val intent = Intent(this, AppbarToolbarLearning::class.java)
+            startActivity(intent)
+        }
+
+        snackbar_fab_button.setOnClickListener {
+            val intent = Intent(this, SnakckbarAndFABLearning::class.java)
             startActivity(intent)
         }
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
     style="@style/Theme.AppCompat.Light.DarkActionBar"
-    tools:context=".appbar_toolbar.SimpleActionBar">
+    tools:context=".appbar_toolbar.actionbar.SimpleActionBar">
 
 
 

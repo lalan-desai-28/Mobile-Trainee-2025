@@ -1,4 +1,4 @@
-package com.lalan.android_learning.appbar_toolbar
+package com.lalan.android_learning.appbar_toolbar.toolbar
 
 import android.os.Bundle
 import android.widget.Toast
