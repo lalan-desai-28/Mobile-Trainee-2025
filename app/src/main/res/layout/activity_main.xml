@@ -37,5 +37,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ViewPager"/>
+
+    <Button
+        android:id="@+id/appbar_toolbar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AppBar Toolbar"/>
     
 </LinearLayout>
