@@ -14,16 +14,16 @@ import com.lalan.android_learning.R
 
 class SecondActivity : AppCompatActivity() {
 
-
-    private lateinit var pass_data_to_parent_button : Button
+    private lateinit var pass_data_to_parent_button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
+        // initializing buttons from views.
         pass_data_to_parent_button = findViewById(R.id.pass_data_to_parent_button)
 
-        pass_data_to_parent_button.setOnClickListener{
+        pass_data_to_parent_button.setOnClickListener {
             val resultIntent = Intent()
             resultIntent.putExtra("message", "Yudiz Solutions Ltd.")
             setResult(Activity.RESULT_OK, resultIntent)

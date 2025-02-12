@@ -25,7 +25,6 @@ class ActivityLearning : AppCompatActivity() {
         activity_lifecycle_button = findViewById(R.id.activity_lifecycle_button)
         activity_data_pass = findViewById(R.id.activity_data_pass)
 
-
         activity_lifecycle_button.setOnClickListener {
             val intent = Intent(this, LifeCycleActivity::class.java)
             startActivity(intent)

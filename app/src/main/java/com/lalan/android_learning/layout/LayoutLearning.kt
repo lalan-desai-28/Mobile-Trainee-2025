@@ -22,7 +22,7 @@ class LayoutLearning : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_layout_learning)
 
-
+        // initializing buttons.
         signup_from_button = findViewById(R.id.signup_from_button)
         edit_profile_button = findViewById(R.id.edit_profile_button)
         design_form_button = findViewById(R.id.design_form_button)

@@ -21,12 +21,13 @@ class DesignActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_design)
 
+        // initializing frames.
         red_frame = findViewById(R.id.red_frame)
         green_frame = findViewById(R.id.green_frame)
         white_frame = findViewById(R.id.white_frame)
 
 
-        red_frame.setOnClickListener{
+        red_frame.setOnClickListener {
             it.visibility = FrameLayout.GONE
             it.invalidate()
         }
@@ -36,7 +37,7 @@ class DesignActivity : AppCompatActivity() {
             it.invalidate()
         }
 
-        white_frame.setOnClickListener{
+        white_frame.setOnClickListener {
             it.visibility = FrameLayout.GONE
             it.invalidate()
         }

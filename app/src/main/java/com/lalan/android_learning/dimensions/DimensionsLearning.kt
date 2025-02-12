@@ -18,6 +18,7 @@ class DimensionsLearning : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dimensions_learning)
 
+        // initializing button from view.
         responsive_blog_button = findViewById(R.id.responsive_blog_button)
 
         responsive_blog_button.setOnClickListener {
