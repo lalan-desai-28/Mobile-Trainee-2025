@@ -6,60 +6,71 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".dialog.DialogLearning">
+
+    <CheckBox
+        android:id="@+id/material_dialogs_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Material" />
 
     <Button
-        android:id="@+id/activity_button"
+        android:id="@+id/simple_dialog_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity" />
+        android:text="Simple Dialog" />
+
 
     <Button
-        android:id="@+id/layout_button"
+        android:id="@+id/dialog_with_buttons_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Layout" />
+        android:text="Dialog with Buttons" />
 
     <Button
-        android:id="@+id/drawable_button"
+        android:id="@+id/dialog_with_menu_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Drawable &amp; Selector" />
-  
-  <Button
-        android:id="@+id/dimension_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dimensions" />
+        android:text="Dialog with menu" />
+
 
     <Button
-        android:id="@+id/view_pager_button"
+        android:id="@+id/dialog_with_checkboxes_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ViewPager"/>
+        android:text="Dialog with checkboxes" />
+
 
     <Button
-        android:id="@+id/appbar_toolbar_button"
+        android:id="@+id/dialog_with_radios_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AppBar Toolbar"/>
+        android:text="Dialog with radio buttons" />
+
 
     <Button
-        android:id="@+id/snackbar_fab_button"
+        android:id="@+id/non_cancelable_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Snackbar and FAB"/>
+        android:text="Non Cancelable Dialog" />
 
     <Button
-        android:id="@+id/fonts_button"
+        android:id="@+id/dialog_with_custom_layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fonts"/>
+        android:text="Dialog with custom layout" />
 
     <Button
-        android:id="@+id/dialogs_button"
+        android:id="@+id/date_picker_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialogs"/>
-    
+        android:text="Date Picker Dialog" />
+
+    <Button
+        android:id="@+id/time_picker_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time Picker Dialog" />
+
 </LinearLayout>
