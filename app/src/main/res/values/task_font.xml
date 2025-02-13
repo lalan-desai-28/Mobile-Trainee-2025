@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_text_one">You can apply your custom font directly by adding fontFamily tag in your xml code.</string>
+    <string name="font_text_two">You can also create your own font family. Which can be used directly in your custom theme.</string>
+    <string name="font_text_three">You can also use other languages fonts as shown below.</string>
+    <string name="font_text_four">चूंकि मानव अधिकारों के प्रति उपेक्षा और घृणा के फलस्वरूप ही ऐसे बर्बर कार्य हुए जिनसे मनुष्य</string>
+    <string name="font_text_five">I am italic.</string>
+    <string name="font_text_six">I am bold.</string>
+    <string name="task_font_seven">My font weight is 800.</string>
+</resources>
