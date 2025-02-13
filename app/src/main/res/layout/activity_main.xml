@@ -49,5 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Snackbar and FAB"/>
+
+    <Button
+        android:id="@+id/fonts_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fonts"/>
     
 </LinearLayout>

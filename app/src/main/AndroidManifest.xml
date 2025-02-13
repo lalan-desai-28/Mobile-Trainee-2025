@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".font.FontLearning"
+            android:exported="false" />
+        <activity
             android:name=".snackbar_fab.fab.FABExample"
             android:exported="false" />
         <activity
