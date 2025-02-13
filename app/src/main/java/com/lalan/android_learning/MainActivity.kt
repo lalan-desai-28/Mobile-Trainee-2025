@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import com.lalan.android_learning.activity.ActivityLearning
 import com.lalan.android_learning.appbar_toolbar.AppbarToolbarLearning
+import com.lalan.android_learning.dialog.DialogLearning
 import com.lalan.android_learning.dimensions.DimensionsLearning
 import com.lalan.android_learning.drawable.DrawableActivity
 import com.lalan.android_learning.font.FontLearning
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appbar_toolbar_button: Button
     private lateinit var snackbar_fab_button: Button
     private lateinit var fonts_button : Button
+    private lateinit var dialogs_button : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         appbar_toolbar_button = findViewById(R.id.appbar_toolbar_button)
         snackbar_fab_button = findViewById(R.id.snackbar_fab_button)
         fonts_button = findViewById(R.id.fonts_button)
+        dialogs_button = findViewById(R.id.dialogs_button)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -78,6 +81,11 @@ class MainActivity : AppCompatActivity() {
 
         fonts_button.setOnClickListener {
             val intent = Intent(this, FontLearning::class.java)
+            startActivity(intent)
+        }
+
+        dialogs_button.setOnClickListener {
+            val intent = Intent(this, DialogLearning::class.java)
             startActivity(intent)
         }
     }
