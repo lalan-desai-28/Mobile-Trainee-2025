@@ -11,6 +11,7 @@ import com.lalan.android_learning.dialog.DialogLearning
 import com.lalan.android_learning.dimensions.DimensionsLearning
 import com.lalan.android_learning.drawable.DrawableActivity
 import com.lalan.android_learning.font.FontLearning
+import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.layout.LayoutLearning
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var snackbar_fab_button: Button
     private lateinit var fonts_button : Button
     private lateinit var dialogs_button : Button
+    private lateinit var fragments_button : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         snackbar_fab_button = findViewById(R.id.snackbar_fab_button)
         fonts_button = findViewById(R.id.fonts_button)
         dialogs_button = findViewById(R.id.dialogs_button)
+        fragments_button = findViewById(R.id.fragments_button)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -86,6 +89,11 @@ class MainActivity : AppCompatActivity() {
 
         dialogs_button.setOnClickListener {
             val intent = Intent(this, DialogLearning::class.java)
+            startActivity(intent)
+        }
+
+        fragments_button.setOnClickListener {
+            val intent = Intent(this, FragmentsLearning::class.java)
             startActivity(intent)
         }
     }
