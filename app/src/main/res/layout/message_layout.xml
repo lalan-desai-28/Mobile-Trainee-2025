@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxWidth="300dp"
-                    android:text="adjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdadjasbdjabsdad"
+                    android:text="This is a test message."
                     android:textAlignment="viewStart"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +47,7 @@
                     android:layout_alignBottom="@id/messageTextview"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="1dp"
-                    android:paddingTop="10sp"
+                    android:paddingTop="5dp"
                     android:text="03:15 PM"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/messageTextview" />

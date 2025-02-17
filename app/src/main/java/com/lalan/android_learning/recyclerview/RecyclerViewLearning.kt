@@ -1,6 +1,7 @@
 package com.lalan.android_learning.recyclerview
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
@@ -29,17 +30,17 @@ class RecyclerViewLearning : AppCompatActivity() {
 
     private lateinit var adapter: MessageAdapter
 
-
     private var messageToUpdate = -1
 
     private val messages: MutableList<Message> = mutableListOf()
 
     fun setEditMessage(position: Int) {
+        Log.d("TAG", "setEditMessage: $position")
+        messageToUpdate = position
         myToolbar.visibility = View.VISIBLE
-        val msg = messages[position]
+        val msg = messages[messageToUpdate]
         messageBox.setText(msg.message)
         messageBox.setSelection(msg.message.length)
-        messageToUpdate = position
     }
 
     private fun sendMessage(isSender: Boolean) {
