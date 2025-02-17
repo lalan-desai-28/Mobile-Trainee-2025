@@ -13,6 +13,7 @@ import com.lalan.android_learning.drawable.DrawableActivity
 import com.lalan.android_learning.font.FontLearning
 import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.layout.LayoutLearning
+import com.lalan.android_learning.recyclerview.RecyclerViewLearning
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
 
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fonts_button : Button
     private lateinit var dialogs_button : Button
     private lateinit var fragments_button : Button
+    private lateinit var recyclerViewButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         fonts_button = findViewById(R.id.fonts_button)
         dialogs_button = findViewById(R.id.dialogs_button)
         fragments_button = findViewById(R.id.fragments_button)
+        recyclerViewButton = findViewById(R.id.recyclerViewButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -94,6 +97,11 @@ class MainActivity : AppCompatActivity() {
 
         fragments_button.setOnClickListener {
             val intent = Intent(this, FragmentsLearning::class.java)
+            startActivity(intent)
+        }
+
+        recyclerViewButton.setOnClickListener {
+            val intent = Intent(this, RecyclerViewLearning::class.java)
             startActivity(intent)
         }
     }
