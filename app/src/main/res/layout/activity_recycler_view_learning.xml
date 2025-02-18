@@ -25,9 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"
-            app:navigationIcon="@drawable/close_24px"
-            app:title="Editing Message" />
+            app:title="Chat" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

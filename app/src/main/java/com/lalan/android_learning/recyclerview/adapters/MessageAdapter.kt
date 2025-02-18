@@ -16,10 +16,18 @@ import com.lalan.android_learning.recyclerview.models.Message
 import java.time.format.DateTimeFormatter
 
 
-class MessageAdapter(val messages: MutableList<Message>) :
+class MessageAdapter(private val messages: MutableList<Message>) :
     RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
 
     private lateinit var context: Context
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
 
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val messageTextview: TextView = view.findViewById(R.id.messageTextview)
@@ -41,7 +49,6 @@ class MessageAdapter(val messages: MutableList<Message>) :
         val message = messages[itemPosition]
 
         if (!message.isSender) {
-
             val params = RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
@@ -59,9 +66,8 @@ class MessageAdapter(val messages: MutableList<Message>) :
             holder.timeTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
         }
 
-        holder.messageTextview.text = message.message.toString()
+        holder.messageTextview.text = message.message
         holder.timeTextView.text = message.dateTime.format(DateTimeFormatter.ofPattern("HH:mm:ss"))
-
 
         holder.messageCardView.setOnLongClickListener {
             MaterialAlertDialogBuilder(context).setTitle("Select an option").setItems(
@@ -76,12 +82,7 @@ class MessageAdapter(val messages: MutableList<Message>) :
                     notifyItemRemoved(itemPosition)
                 }
             }.show()
-
             true
         }
-
-
     }
-
-
 }

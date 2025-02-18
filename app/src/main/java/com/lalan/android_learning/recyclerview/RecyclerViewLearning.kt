@@ -2,11 +2,9 @@ package com.lalan.android_learning.recyclerview
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -34,10 +32,20 @@ class RecyclerViewLearning : AppCompatActivity() {
 
     private val messages: MutableList<Message> = mutableListOf()
 
+    private fun changeToolbar(isEditing: Boolean) {
+        if (isEditing) {
+            myToolbar.title = "Editing message"
+            myToolbar.setNavigationIcon(R.drawable.close_24px)
+        } else {
+            myToolbar.title = "Chat"
+            myToolbar.navigationIcon = null
+        }
+    }
+
     fun setEditMessage(position: Int) {
         Log.d("TAG", "setEditMessage: $position")
         messageToUpdate = position
-        myToolbar.visibility = View.VISIBLE
+        changeToolbar(true)
         val msg = messages[messageToUpdate]
         messageBox.setText(msg.message)
         messageBox.setSelection(msg.message.length)
@@ -53,12 +61,12 @@ class RecyclerViewLearning : AppCompatActivity() {
 
     private fun editMessage(isSender: Boolean) {
         val updatedMessage =
-            Message(messageBox.text.toString(), isSender, messages[messageToUpdate].dateTime)
+            Message(messageBox.text.toString(), isSender, LocalDateTime.now())
         messages[messageToUpdate] = updatedMessage
         adapter.notifyItemChanged(messageToUpdate)
         messageToUpdate = -1
         messageBox.setText("")
-        myToolbar.visibility = View.GONE
+        changeToolbar(false)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,6 +89,7 @@ class RecyclerViewLearning : AppCompatActivity() {
         myToolbar = findViewById(R.id.myToolbar)
 
         adapter = MessageAdapter(messages)
+        adapter.setHasStableIds(true)
 
         recyclerView.adapter = adapter
 
@@ -88,39 +97,34 @@ class RecyclerViewLearning : AppCompatActivity() {
 
         receiverButton.setOnClickListener {
 
-            if (messageBox.text.length < 1)
-                Toast.makeText(this, "Message can not be empty!", Toast.LENGTH_SHORT).show()
-
-            if (messageToUpdate != -1) {
-                editMessage(false)
+            if (messageBox.text.isEmpty())
                 return@setOnClickListener
-            }
 
-            sendMessage(false)
+            if (messageToUpdate != -1)
+                editMessage(false)
+            else
+                sendMessage(false)
+
         }
 
         senderButton.setOnClickListener {
 
-            if (messageBox.text.length < 1)
-                Toast.makeText(this, "Message can not be empty!", Toast.LENGTH_SHORT).show()
-
-            if (messageToUpdate != -1) {
-                editMessage(true)
+            if (messageBox.text.isEmpty())
                 return@setOnClickListener
-            }
 
-            sendMessage(true)
+            if (messageToUpdate != -1)
+                editMessage(true)
+            else
+                sendMessage(true)
+
         }
 
 
         myToolbar.setNavigationOnClickListener {
             messageBox.setText("")
             messageToUpdate = -1
-            myToolbar.visibility = View.GONE
+            changeToolbar(false)
         }
 
-
     }
-
-
 }
