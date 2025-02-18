@@ -67,5 +67,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fragments"/>
+
+    <Button
+        android:id="@+id/recyclerViewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView"/>
     
 </LinearLayout>
