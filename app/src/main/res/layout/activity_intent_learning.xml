@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".intent.IntentLearning">
+
+    <Button
+        android:id="@+id/audioActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio Intent" />
+
+    <Button
+        android:id="@+id/imageActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image Intent" />
+
+
+    <Button
+        android:id="@+id/openLinkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Link" />
+
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call" />
+
+
+    <Button
+        android:id="@+id/sendMailButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send an Email" />
+
+
+</LinearLayout>
