@@ -14,6 +14,7 @@ import com.lalan.android_learning.font.FontLearning
 import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
+import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview.RecyclerViewLearning
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fragments_button: Button
     private lateinit var recyclerViewButton: Button
     private lateinit var intentButton: Button
+    private lateinit var permissionsButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         fragments_button = findViewById(R.id.fragments_button)
         recyclerViewButton = findViewById(R.id.recyclerViewButton)
         intentButton = findViewById(R.id.intentButton)
+        permissionsButton = findViewById(R.id.permissionsButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -112,5 +115,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, IntentLearning::class.java)
             startActivity(intent)
         }
+
+        permissionsButton.setOnClickListener {
+            val intent = Intent(this, RuntimePermissionsLearning::class.java)
+            startActivity(intent)
+        }
+
     }
 }
