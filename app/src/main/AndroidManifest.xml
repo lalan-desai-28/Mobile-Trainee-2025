@@ -13,6 +13,33 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".intent.activities.ImageIntent"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/png" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".intent.activities.AudioIntent"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/mpeg" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".intent.IntentLearning"
+            android:exported="false" />
+        <activity
             android:name=".recyclerview.RecyclerViewLearning"
             android:exported="false" />
         <activity
@@ -85,7 +112,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
