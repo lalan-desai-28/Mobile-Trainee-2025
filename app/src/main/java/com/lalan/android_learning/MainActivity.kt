@@ -16,6 +16,7 @@ import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview.RecyclerViewLearning
+import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
 
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerViewButton: Button
     private lateinit var intentButton: Button
     private lateinit var permissionsButton: Button
+    private lateinit var sharedPrefButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewButton = findViewById(R.id.recyclerViewButton)
         intentButton = findViewById(R.id.intentButton)
         permissionsButton = findViewById(R.id.permissionsButton)
+        sharedPrefButton = findViewById(R.id.sharedPrefButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -121,5 +124,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        sharedPrefButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

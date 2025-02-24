@@ -90,6 +90,12 @@
             android:layout_height="wrap_content"
             android:text="Runtime Permissions" />
 
+        <Button
+            android:id="@+id/sharedPrefButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Preferences" />
+
     </LinearLayout>
 
 </ScrollView>
