@@ -1,89 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/activity_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/layout_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Layout" />
+        <Button
+            android:id="@+id/activity_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity" />
 
-    <Button
-        android:id="@+id/drawable_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Drawable &amp; Selector" />
-  
-  <Button
-        android:id="@+id/dimension_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dimensions" />
+        <Button
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Layout" />
 
-    <Button
-        android:id="@+id/view_pager_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ViewPager"/>
+        <Button
+            android:id="@+id/drawable_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawable &amp; Selector" />
 
-    <Button
-        android:id="@+id/appbar_toolbar_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AppBar Toolbar"/>
+        <Button
+            android:id="@+id/dimension_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dimensions" />
 
-    <Button
-        android:id="@+id/snackbar_fab_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Snackbar and FAB"/>
+        <Button
+            android:id="@+id/view_pager_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewPager" />
 
-    <Button
-        android:id="@+id/fonts_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fonts"/>
+        <Button
+            android:id="@+id/appbar_toolbar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AppBar Toolbar" />
 
-    <Button
-        android:id="@+id/dialogs_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dialogs"/>
+        <Button
+            android:id="@+id/snackbar_fab_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snackbar and FAB" />
 
-    <Button
-        android:id="@+id/fragments_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fragments"/>
+        <Button
+            android:id="@+id/fonts_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fonts" />
 
-    <Button
-        android:id="@+id/recyclerViewButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RecyclerView"/>
+        <Button
+            android:id="@+id/dialogs_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dialogs" />
 
-    <Button
-        android:id="@+id/intentButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Intent"/>
+        <Button
+            android:id="@+id/fragments_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fragments" />
 
-    <Button
-        android:id="@+id/permissionsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Runtime Permissions"/>
-    
-</LinearLayout>
+        <Button
+            android:id="@+id/recyclerViewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView" />
+
+        <Button
+            android:id="@+id/intentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intent" />
+
+        <Button
+            android:id="@+id/permissionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Runtime Permissions" />
+
+    </LinearLayout>
+
+</ScrollView>
