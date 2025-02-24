@@ -19,6 +19,7 @@ import com.lalan.android_learning.recyclerview.RecyclerViewLearning
 import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
+import com.lalan.android_learning.webview.WebViewLearning
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var intentButton: Button
     private lateinit var permissionsButton: Button
     private lateinit var sharedPrefButton: Button
+    private lateinit var webviewButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         intentButton = findViewById(R.id.intentButton)
         permissionsButton = findViewById(R.id.permissionsButton)
         sharedPrefButton = findViewById(R.id.sharedPrefButton)
+        webviewButton = findViewById(R.id.webviewButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -126,6 +129,11 @@ class MainActivity : AppCompatActivity() {
 
         sharedPrefButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        webviewButton.setOnClickListener {
+            val intent = Intent(this, WebViewLearning::class.java)
             startActivity(intent)
         }
     }
