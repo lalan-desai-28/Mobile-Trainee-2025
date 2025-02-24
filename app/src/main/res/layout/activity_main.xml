@@ -96,6 +96,12 @@
             android:layout_height="wrap_content"
             android:text="Shared Preferences" />
 
+        <Button
+            android:id="@+id/webviewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Webview" />
+
     </LinearLayout>
 
 </ScrollView>
