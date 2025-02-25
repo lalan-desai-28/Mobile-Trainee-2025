@@ -14,6 +14,7 @@ import com.lalan.android_learning.font.FontLearning
 import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
+import com.lalan.android_learning.map.MapLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview.RecyclerViewLearning
 import com.lalan.android_learning.retrofit.GetRequestExampleActivity
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sharedPrefButton: Button
     private lateinit var webviewButton : Button
     private lateinit var retrofitButton : Button
+    private lateinit var mapButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         sharedPrefButton = findViewById(R.id.sharedPrefButton)
         webviewButton = findViewById(R.id.webviewButton)
         retrofitButton = findViewById(R.id.retrofitButton)
+        mapButton = findViewById(R.id.mapButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -142,6 +145,11 @@ class MainActivity : AppCompatActivity() {
 
         retrofitButton.setOnClickListener {
             val intent = Intent(this, GetRequestExampleActivity::class.java)
+            startActivity(intent)
+        }
+
+        mapButton.setOnClickListener {
+            val intent = Intent(this, MapLearning::class.java)
             startActivity(intent)
         }
     }
