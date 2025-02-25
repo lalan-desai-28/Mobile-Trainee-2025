@@ -21,8 +21,6 @@ class MessageAdapter(private val messages: MutableList<Message>) :
 
     private lateinit var context: Context
 
-    override fun getItemViewType(position: Int) = position
-
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val messageTextview: TextView = view.findViewById(R.id.messageTextview)
         val timeTextView: TextView = view.findViewById(R.id.timeTextView)
@@ -40,6 +38,7 @@ class MessageAdapter(private val messages: MutableList<Message>) :
     override fun getItemCount() = messages.size
 
     override fun onBindViewHolder(holder: ViewHolder, itemPosition: Int) {
+
         val message = messages[itemPosition]
 
         if (!message.isSender) {
@@ -58,12 +57,28 @@ class MessageAdapter(private val messages: MutableList<Message>) :
             )
             holder.messageTextview.setTextColor(ContextCompat.getColor(context, R.color.white))
             holder.timeTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
+        } else {
+            val params = RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+            )
+            params.addRule(RelativeLayout.ALIGN_PARENT_END)
+
+            holder.messageLayout.layoutParams = params
+            holder.messageCardView.setCardBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    R.color.white
+                )
+            )
+            holder.messageTextview.setTextColor(ContextCompat.getColor(context, R.color.black))
+            holder.timeTextView.setTextColor(ContextCompat.getColor(context, R.color.black))
         }
 
         holder.messageTextview.text = message.message
         holder.timeTextView.text = SimpleDateFormat("hh:mm:ss").format(message.dateTime)
 
-        holder.messageCardView.setOnLongClickListener {
+        holder.itemView.setOnLongClickListener {
             MaterialAlertDialogBuilder(context).setTitle("Select an option").setItems(
                 arrayOf("Edit", "Delete"),
             ) { _, index ->
@@ -72,10 +87,12 @@ class MessageAdapter(private val messages: MutableList<Message>) :
                     (context as RecyclerViewLearning).setEditMessage(itemPosition)
                 } else {
                     //delete
-                    (context as RecyclerViewLearning).deleteMessage(itemPosition)
+                    (context as RecyclerViewLearning).deleteMessage(message)
+                    notifyItemRemoved(itemPosition)
                 }
             }.show()
             true
         }
+
     }
 }

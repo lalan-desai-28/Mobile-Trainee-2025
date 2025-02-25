@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -70,21 +71,21 @@ class RecyclerViewLearning : AppCompatActivity() {
             dateTime = Date()
         )
 
-        messages[messageToUpdatePosition] = updatedMessage
+        messages.removeAt(messageToUpdatePosition)
+        messages.add(messageToUpdatePosition, updatedMessage)
+
         messageDao.update(updatedMessage)
 
         adapter.notifyItemChanged(messageToUpdatePosition)
-        messageToUpdatePosition = -1
-        messageBox.setText("")
+        recyclerView.setHasFixedSize(true)
         changeToolbar(false)
+        messageBox.setText("")
+        messageToUpdatePosition = -1
     }
 
-    fun deleteMessage(position: Int) {
-        val messageToDelete = messages[position]
-        messages.removeAt(position)
+    fun deleteMessage(messageToDelete: Message) {
+        messages.remove(messageToDelete)
         messageDao.delete(messageToDelete)
-        adapter.notifyItemRemoved(position)
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,9 +112,8 @@ class RecyclerViewLearning : AppCompatActivity() {
         messages.addAll(0, messageDao.getAll())
         adapter = MessageAdapter(messages)
 
-        recyclerView.adapter = adapter
-
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
 
         recyclerView.scrollToPosition(messages.size - 1)
 
