@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Internet -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- Location -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Gallery -->
     <uses-permission
@@ -28,6 +26,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".map.MapLearning"
+            android:exported="false" />
         <activity
             android:name=".webview.WebViewLearning"
             android:exported="false" />
