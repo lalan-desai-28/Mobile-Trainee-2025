@@ -1,4 +1,4 @@
-package com.lalan.android_learning.recyclerview.adapters
+package com.lalan.android_learning.recyclerview_with_room.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -11,9 +11,9 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lalan.android_learning.R
-import com.lalan.android_learning.recyclerview.RecyclerViewLearning
-import com.lalan.android_learning.recyclerview.models.Message
-import java.time.format.DateTimeFormatter
+import com.lalan.android_learning.recyclerview_with_room.RecyclerViewLearning
+import com.lalan.android_learning.recyclerview_with_room.models.Message
+import java.text.SimpleDateFormat
 
 
 class MessageAdapter(private val messages: MutableList<Message>) :
@@ -21,13 +21,7 @@ class MessageAdapter(private val messages: MutableList<Message>) :
 
     private lateinit var context: Context
 
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        return position
-    }
+    override fun getItemViewType(position: Int) = position
 
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val messageTextview: TextView = view.findViewById(R.id.messageTextview)
@@ -67,7 +61,7 @@ class MessageAdapter(private val messages: MutableList<Message>) :
         }
 
         holder.messageTextview.text = message.message
-        holder.timeTextView.text = message.dateTime.format(DateTimeFormatter.ofPattern("HH:mm:ss"))
+        holder.timeTextView.text = SimpleDateFormat("hh:mm:ss").format(message.dateTime)
 
         holder.messageCardView.setOnLongClickListener {
             MaterialAlertDialogBuilder(context).setTitle("Select an option").setItems(
@@ -78,8 +72,7 @@ class MessageAdapter(private val messages: MutableList<Message>) :
                     (context as RecyclerViewLearning).setEditMessage(itemPosition)
                 } else {
                     //delete
-                    messages.removeAt(itemPosition)
-                    notifyItemRemoved(itemPosition)
+                    (context as RecyclerViewLearning).deleteMessage(itemPosition)
                 }
             }.show()
             true
