@@ -10,7 +10,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".recyclerview.RecyclerViewLearning">
+    tools:context=".recyclerview_with_room.RecyclerViewLearning">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

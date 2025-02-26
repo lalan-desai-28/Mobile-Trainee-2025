@@ -1,10 +1,10 @@
-package com.lalan.android_learning.recyclerview
+package com.lalan.android_learning.recyclerview_with_room
 
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -12,10 +12,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import com.lalan.android_learning.R
-import com.lalan.android_learning.recyclerview.adapters.MessageAdapter
-import com.lalan.android_learning.recyclerview.models.Message
-import java.time.LocalDateTime
+import com.lalan.android_learning.recyclerview_with_room.adapters.MessageAdapter
+import com.lalan.android_learning.recyclerview_with_room.models.Message
+import java.util.Date
 
 
 class RecyclerViewLearning : AppCompatActivity() {
@@ -25,11 +26,9 @@ class RecyclerViewLearning : AppCompatActivity() {
     private lateinit var receiverButton: ImageButton
     private lateinit var senderButton: ImageButton
     private lateinit var myToolbar: Toolbar
-
+    private lateinit var messageDao: MessageDao
     private lateinit var adapter: MessageAdapter
-
-    private var messageToUpdate = -1
-
+    private var messageToUpdatePosition: Int = -1
     private val messages: MutableList<Message> = mutableListOf()
 
     private fun changeToolbar(isEditing: Boolean) {
@@ -42,31 +41,51 @@ class RecyclerViewLearning : AppCompatActivity() {
         }
     }
 
+
     fun setEditMessage(position: Int) {
-        Log.d("TAG", "setEditMessage: $position")
-        messageToUpdate = position
+        messageToUpdatePosition = position
         changeToolbar(true)
-        val msg = messages[messageToUpdate]
-        messageBox.setText(msg.message)
-        messageBox.setSelection(msg.message.length)
+        messageBox.setText(messages[position].message)
+        messageBox.setSelection(messages[position].message.length)
     }
 
     private fun sendMessage(isSender: Boolean) {
-        val newMessage = Message(messageBox.text.toString(), isSender, LocalDateTime.now())
-        messages.add(newMessage)
+        val newMessage =
+            Message(message = messageBox.text.toString(), isSender = isSender, dateTime = Date())
+
+        val messageWithID = newMessage.copy(id = messageDao.insert(newMessage).toInt())
+        messages.add(messageWithID)
+
         adapter.notifyItemInserted(messages.size - 1)
         recyclerView.scrollToPosition(messages.size - 1)
         messageBox.setText("")
     }
 
+
     private fun editMessage(isSender: Boolean) {
-        val updatedMessage =
-            Message(messageBox.text.toString(), isSender, LocalDateTime.now())
-        messages[messageToUpdate] = updatedMessage
-        adapter.notifyItemChanged(messageToUpdate)
-        messageToUpdate = -1
-        messageBox.setText("")
+        val oldMessage = messages[messageToUpdatePosition]
+
+        val updatedMessage = oldMessage.copy(
+            message = messageBox.text.toString(),
+            isSender = isSender,
+            dateTime = Date()
+        )
+
+        messages.removeAt(messageToUpdatePosition)
+        messages.add(messageToUpdatePosition, updatedMessage)
+
+        messageDao.update(updatedMessage)
+
+        adapter.notifyItemChanged(messageToUpdatePosition)
+        recyclerView.setHasFixedSize(true)
         changeToolbar(false)
+        messageBox.setText("")
+        messageToUpdatePosition = -1
+    }
+
+    fun deleteMessage(messageToDelete: Message) {
+        messages.remove(messageToDelete)
+        messageDao.delete(messageToDelete)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,7 +98,9 @@ class RecyclerViewLearning : AppCompatActivity() {
             insets
         }
 
-        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
+        messageDao = Room.databaseBuilder(this, MessageDatabase::class.java, "MessageDatabase")
+            .allowMainThreadQueries().build().messageDao()
 
         // Initializing the components.
         recyclerView = findViewById(R.id.recyclerView)
@@ -88,41 +109,37 @@ class RecyclerViewLearning : AppCompatActivity() {
         senderButton = findViewById(R.id.senderButton)
         myToolbar = findViewById(R.id.myToolbar)
 
+        messages.addAll(0, messageDao.getAll())
         adapter = MessageAdapter(messages)
-        adapter.setHasStableIds(true)
-
-        recyclerView.adapter = adapter
 
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+
+        recyclerView.scrollToPosition(messages.size - 1)
 
         receiverButton.setOnClickListener {
-
             if (messageBox.text.isEmpty())
                 return@setOnClickListener
 
-            if (messageToUpdate != -1)
+            if (messageToUpdatePosition != -1)
                 editMessage(false)
             else
                 sendMessage(false)
-
         }
 
         senderButton.setOnClickListener {
-
             if (messageBox.text.isEmpty())
                 return@setOnClickListener
 
-            if (messageToUpdate != -1)
+            if (messageToUpdatePosition != -1)
                 editMessage(true)
             else
                 sendMessage(true)
-
         }
-
 
         myToolbar.setNavigationOnClickListener {
             messageBox.setText("")
-            messageToUpdate = -1
+            messageToUpdatePosition = -1
             changeToolbar(false)
         }
 

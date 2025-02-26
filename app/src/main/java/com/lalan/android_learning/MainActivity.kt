@@ -16,7 +16,7 @@ import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
 import com.lalan.android_learning.map.MapLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
-import com.lalan.android_learning.recyclerview.RecyclerViewLearning
+import com.lalan.android_learning.recyclerview_with_room.RecyclerViewLearning
 import com.lalan.android_learning.retrofit.GetRequestExampleActivity
 import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning

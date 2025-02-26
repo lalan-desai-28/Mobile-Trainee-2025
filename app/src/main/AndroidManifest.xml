@@ -75,7 +75,7 @@
             android:name=".intent.IntentLearning"
             android:exported="false" />
         <activity
-            android:name=".recyclerview.RecyclerViewLearning"
+            android:name=".recyclerview_with_room.RecyclerViewLearning"
             android:exported="false" />
         <activity
             android:name=".fragments.FragmentsLearning"
