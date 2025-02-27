@@ -15,6 +15,7 @@ import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
 import com.lalan.android_learning.map.MapLearning
+import com.lalan.android_learning.notification_fcm.NotificationAndFCMLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview_with_room.RecyclerViewLearning
 import com.lalan.android_learning.retrofit.GetRequestExampleActivity
@@ -40,9 +41,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var intentButton: Button
     private lateinit var permissionsButton: Button
     private lateinit var sharedPrefButton: Button
-    private lateinit var webviewButton : Button
-    private lateinit var retrofitButton : Button
+    private lateinit var webviewButton: Button
+    private lateinit var retrofitButton: Button
     private lateinit var mapButton: Button
+    private lateinit var notificationAndFCMButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         webviewButton = findViewById(R.id.webviewButton)
         retrofitButton = findViewById(R.id.retrofitButton)
         mapButton = findViewById(R.id.mapButton)
+        notificationAndFCMButton = findViewById(R.id.notificationAndFCMButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -150,6 +153,11 @@ class MainActivity : AppCompatActivity() {
 
         mapButton.setOnClickListener {
             val intent = Intent(this, MapLearning::class.java)
+            startActivity(intent)
+        }
+
+        notificationAndFCMButton.setOnClickListener {
+            val intent = Intent(this, NotificationAndFCMLearning::class.java)
             startActivity(intent)
         }
     }
