@@ -114,6 +114,12 @@
             android:layout_height="wrap_content"
             android:text="Maps" />
 
+        <Button
+            android:id="@+id/notificationAndFCMButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification &amp; FCM" />
+
     </LinearLayout>
 
 </ScrollView>
