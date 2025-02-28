@@ -15,6 +15,7 @@ import com.lalan.android_learning.fragments.FragmentsLearning
 import com.lalan.android_learning.intent.IntentLearning
 import com.lalan.android_learning.layout.LayoutLearning
 import com.lalan.android_learning.map.MapLearning
+import com.lalan.android_learning.multithreading.MultiThreadingLearning
 import com.lalan.android_learning.notification_fcm.NotificationAndFCMLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview_with_room.RecyclerViewLearning
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var retrofitButton: Button
     private lateinit var mapButton: Button
     private lateinit var notificationAndFCMButton: Button
-
+    private lateinit var multiThreadingButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         retrofitButton = findViewById(R.id.retrofitButton)
         mapButton = findViewById(R.id.mapButton)
         notificationAndFCMButton = findViewById(R.id.notificationAndFCMButton)
+        multiThreadingButton = findViewById(R.id.multiThreadingButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -160,5 +162,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NotificationAndFCMLearning::class.java)
             startActivity(intent)
         }
+
+        multiThreadingButton.setOnClickListener {
+            val intent = Intent(this, MultiThreadingLearning::class.java)
+            startActivity(intent)
+        }
+
     }
 }
