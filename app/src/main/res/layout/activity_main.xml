@@ -120,6 +120,13 @@
             android:layout_height="wrap_content"
             android:text="Notification &amp; FCM" />
 
+        <Button
+            android:id="@+id/multiThreadingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multi Threading" />
+
+
     </LinearLayout>
 
 </ScrollView>

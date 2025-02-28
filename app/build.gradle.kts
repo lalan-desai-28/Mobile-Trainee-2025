@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.lalan.android_learning"
-        minSdk = 26
+        minSdk = 27
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
