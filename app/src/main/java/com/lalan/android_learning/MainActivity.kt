@@ -24,6 +24,7 @@ import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
 import com.lalan.android_learning.webview.WebViewLearning
+import com.lalan.android_learning.workmanager.WorkManagerLearning
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mapButton: Button
     private lateinit var notificationAndFCMButton: Button
     private lateinit var multiThreadingButton: Button
+    private lateinit var workManagerButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         mapButton = findViewById(R.id.mapButton)
         notificationAndFCMButton = findViewById(R.id.notificationAndFCMButton)
         multiThreadingButton = findViewById(R.id.multiThreadingButton)
+        workManagerButton = findViewById(R.id.workManagerButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -165,6 +168,11 @@ class MainActivity : AppCompatActivity() {
 
         multiThreadingButton.setOnClickListener {
             val intent = Intent(this, MultiThreadingLearning::class.java)
+            startActivity(intent)
+        }
+
+        workManagerButton.setOnClickListener {
+            val intent = Intent(this, WorkManagerLearning::class.java)
             startActivity(intent)
         }
 
