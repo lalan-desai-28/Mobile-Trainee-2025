@@ -30,6 +30,9 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".workmanager.WorkManagerLearning"
+            android:exported="false" />
+        <activity
             android:name=".multithreading.MultiThreadingLearning"
             android:exported="false" />
 

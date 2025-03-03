@@ -126,6 +126,12 @@
             android:layout_height="wrap_content"
             android:text="Multi Threading" />
 
+        <Button
+            android:id="@+id/workManagerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work Manager" />
+
 
     </LinearLayout>
 
