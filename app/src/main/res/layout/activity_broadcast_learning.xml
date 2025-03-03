@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".broadcast.BroadcastLearning">
+
+    <TextView
+        android:id="@+id/networkStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/task_drawable_selector_edittext_border"
+        android:padding="20dp"
+        android:text="Network Status"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/task_drawable_selector_edittext_border"
+        android:padding="20dp"
+        android:text="SMS Receiver Working."
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/sendCustomBroadcastButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Custom Broadcast" />
+
+
+</LinearLayout>
