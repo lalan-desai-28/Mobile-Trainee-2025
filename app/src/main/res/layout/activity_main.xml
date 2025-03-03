@@ -132,6 +132,12 @@
             android:layout_height="wrap_content"
             android:text="Work Manager" />
 
+        <Button
+            android:id="@+id/broadcastButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Broadcast" />
+
 
     </LinearLayout>
 
