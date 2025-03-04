@@ -5,6 +5,7 @@ import android.os.AsyncTask
 class CounterUpdaterTask(val onProgress: (Int) -> Unit, val onPostExecute: () -> Unit) :
     AsyncTask<Int, Int, Int>() {
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg input: Int?): Int {
         for (i in (1..100)) {
             publishProgress(i)
@@ -13,6 +14,7 @@ class CounterUpdaterTask(val onProgress: (Int) -> Unit, val onPostExecute: () ->
         return -1
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onProgressUpdate(vararg values: Int?) {
         if (values[0] == 10) {
             cancel(true)
@@ -21,6 +23,7 @@ class CounterUpdaterTask(val onProgress: (Int) -> Unit, val onPostExecute: () ->
         onProgress(values[0] ?: 0)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: Int?) {
         onPostExecute()
     }

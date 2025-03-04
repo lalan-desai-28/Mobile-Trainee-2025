@@ -57,6 +57,10 @@ dependencies {
     implementation(libs.converter.scalars)
     implementation(libs.hilt.android)
     implementation(libs.androidx.activity.ktx)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.github.glide)
     kapt(libs.hilt.android.compiler)
     kapt(libs.androidx.room.compiler)
     testImplementation(libs.junit)
