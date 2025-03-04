@@ -156,6 +156,12 @@
             android:layout_height="wrap_content"
             android:text="Coil, Glide &amp; Dark Theme" />
 
+        <Button
+            android:id="@+id/viewModelAndLiveDataLearningButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewModel &amp; LiveData" />
+
 
     </LinearLayout>
 

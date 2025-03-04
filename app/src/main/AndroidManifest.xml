@@ -40,6 +40,9 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".viewmodel_livedata.ViewModelAndLiveDataLearning"
+            android:exported="false" />
+        <activity
             android:name=".coil_glide_dark_theme.CoilGlideDarkThemeLearning"
             android:exported="false" />
         <activity

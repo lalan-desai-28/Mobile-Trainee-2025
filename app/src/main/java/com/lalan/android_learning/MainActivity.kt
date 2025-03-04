@@ -26,6 +26,7 @@ import com.lalan.android_learning.retrofit.GetRequestExampleActivity
 import com.lalan.android_learning.service.ServiceLearning
 import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
+import com.lalan.android_learning.viewmodel_livedata.ViewModelAndLiveDataLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
 import com.lalan.android_learning.webview.WebViewLearning
 import com.lalan.android_learning.workmanager.WorkManagerLearning
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var serviceButton: Button
     private lateinit var dependencyInjectionButton: Button
     private lateinit var coilGlideDarkThemeButton: Button
+    private lateinit var viewModelAndLiveDataLearningButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         serviceButton = findViewById(R.id.serviceButton)
         dependencyInjectionButton = findViewById(R.id.dependencyInjectionButton)
         coilGlideDarkThemeButton = findViewById(R.id.coilGlideDarkThemeButton)
+        viewModelAndLiveDataLearningButton = findViewById(R.id.viewModelAndLiveDataLearningButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -205,6 +208,11 @@ class MainActivity : AppCompatActivity() {
 
         coilGlideDarkThemeButton.setOnClickListener {
             val intent = Intent(this, CoilGlideDarkThemeLearning::class.java)
+            startActivity(intent)
+        }
+
+        viewModelAndLiveDataLearningButton.setOnClickListener {
+            val intent = Intent(this, ViewModelAndLiveDataLearning::class.java)
             startActivity(intent)
         }
 
