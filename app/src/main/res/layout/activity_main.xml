@@ -144,6 +144,12 @@
             android:layout_height="wrap_content"
             android:text="Service" />
 
+        <Button
+            android:id="@+id/dependencyInjectionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dependency Injection" />
+
 
     </LinearLayout>
 
