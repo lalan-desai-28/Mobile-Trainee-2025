@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.lalan.android_learning.activity.ActivityLearning
 import com.lalan.android_learning.appbar_toolbar.AppbarToolbarLearning
 import com.lalan.android_learning.broadcast.BroadcastLearning
+import com.lalan.android_learning.dependency_injection.DependencyInjectionLearning
 import com.lalan.android_learning.dialog.DialogLearning
 import com.lalan.android_learning.dimensions.DimensionsLearning
 import com.lalan.android_learning.drawable.DrawableActivity
@@ -53,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var workManagerButton: Button
     private lateinit var broadcastButton: Button
     private lateinit var serviceButton: Button
+    private lateinit var dependencyInjectionButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,6 +83,7 @@ class MainActivity : AppCompatActivity() {
         workManagerButton = findViewById(R.id.workManagerButton)
         broadcastButton = findViewById(R.id.broadcastButton)
         serviceButton = findViewById(R.id.serviceButton)
+        dependencyInjectionButton = findViewById(R.id.dependencyInjectionButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -191,6 +194,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ServiceLearning::class.java)
             startActivity(intent)
         }
+
+        dependencyInjectionButton.setOnClickListener {
+            val intent = Intent(this, DependencyInjectionLearning::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
