@@ -21,6 +21,7 @@ import com.lalan.android_learning.notification_fcm.NotificationAndFCMLearning
 import com.lalan.android_learning.permissions.RuntimePermissionsLearning
 import com.lalan.android_learning.recyclerview_with_room.RecyclerViewLearning
 import com.lalan.android_learning.retrofit.GetRequestExampleActivity
+import com.lalan.android_learning.service.ServiceLearning
 import com.lalan.android_learning.sharedpreferences.LoginActivity
 import com.lalan.android_learning.snackbar_fab.SnakckbarAndFABLearning
 import com.lalan.android_learning.viewpager.ViewPagerActivity
@@ -50,7 +51,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var notificationAndFCMButton: Button
     private lateinit var multiThreadingButton: Button
     private lateinit var workManagerButton: Button
-    private lateinit var broadcastButton : Button
+    private lateinit var broadcastButton: Button
+    private lateinit var serviceButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         multiThreadingButton = findViewById(R.id.multiThreadingButton)
         workManagerButton = findViewById(R.id.workManagerButton)
         broadcastButton = findViewById(R.id.broadcastButton)
+        serviceButton = findViewById(R.id.serviceButton)
 
         activity_button.setOnClickListener {
             val intent = Intent(this, ActivityLearning::class.java)
@@ -181,6 +184,11 @@ class MainActivity : AppCompatActivity() {
 
         broadcastButton.setOnClickListener {
             val intent = Intent(this, BroadcastLearning::class.java)
+            startActivity(intent)
+        }
+
+        serviceButton.setOnClickListener {
+            val intent = Intent(this, ServiceLearning::class.java)
             startActivity(intent)
         }
 

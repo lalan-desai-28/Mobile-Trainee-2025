@@ -2,39 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- Location -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <!-- Gallery -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Gallery -->
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-
-    <!-- Camera -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> <!-- Camera -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
-
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Notification -->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
-    <!-- Alarm -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Notification -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Alarm -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-
-    <!-- Network States -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" /> <!-- Network States -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-    <!-- Receive SMS -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Receive SMS -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
@@ -50,6 +42,16 @@
         android:theme="@style/Theme.Android_Learning"
         tools:targetApi="31">
         <activity
+            android:name=".service.ServiceLearning"
+            android:exported="false" />
+
+        <service
+            android:name=".service.MyBackgroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <activity
             android:name=".broadcast.BroadcastLearning"
             android:exported="false" />
         <activity
@@ -58,6 +60,7 @@
         <activity
             android:name=".multithreading.MultiThreadingLearning"
             android:exported="false" />
+
 
         <service
             android:name=".notification_fcm.FCMService"
@@ -199,7 +202,6 @@
         </activity>
 
         <receiver android:name=".notification_fcm.Notification" />
-
         <receiver
             android:name=".broadcast.SMSReceiver"
             android:enabled="true"
@@ -209,8 +211,8 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".broadcast.CustomReceiver" />
+
 
     </application>
 
