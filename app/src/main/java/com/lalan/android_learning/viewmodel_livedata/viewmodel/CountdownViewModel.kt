@@ -3,8 +3,7 @@ package com.lalan.android_learning.viewmodel_livedata.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -21,18 +20,13 @@ class CountdownViewModel : ViewModel() {
 
     fun startTimer(newTimer: Int) {
         _isTimerRunning.postValue(true)
-        timerJob = CoroutineScope(Dispatchers.Default).launch {
+        timerJob = viewModelScope.launch {
             for (i in newTimer downTo 0) {
                 _timer.postValue(i)
                 delay(999)
             }
             _isTimerRunning.postValue(false)
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        stopTimer()
     }
 
     fun stopTimer() {
